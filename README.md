@@ -61,7 +61,6 @@ export const events = new EventManager();
 export const mapper = new Mapper(events);
 
 export function initContext() {
-  mapper.mapCommand(HelloCommand, 'Hello.ButtonClicked');
   mapper.mapCommand(HelloCommand, 'Hello.InputChanged');
 }
 ```
