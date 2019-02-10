@@ -8,105 +8,11 @@ By using the command design pattern, each action a user takes is self contained 
 Undoing is historically implemented using either the command or memento design patterns. The command pattern has the benefit of being lighter weight (from a storage standpoint) because you can choose what you store and how to undo it. 
 
 ## Getting Started
-Start by creating a project with the Vue CLI. Add files to create the following structure (A Vue CLI plugin is in the works):
 
-```
-/commands
-  - HelloCommand.js
-/components
-  - Hello.vue
-/models
-  - HelloModel.js
-context.js
-main.js
-App.vue
-```
+See the examples directory for a list of examples.
+
+`Context`: A Context describes commands you would like to map to what events. 
 
 `Commands`: A class with an execute method that cannot receive any parameters. It is a self contained unit of execution. You can use the command class to do all your business logic. You can inject any models you want to change into this command. Those models should be object literals which will act as singletons. 
 
-`Models`: Are object literals which act as singletons. 
-
-### `models/HelloModel.js`
-
-```javascript
-export default {
-  message: 'Hello',
-};
-```
-
-### `commands/HelloCommand.js`
-
-```javascript
-import HelloModel from '@/models/HelloModel';
-
-export default class HelloCommand {
-  constructor(event) {
-    this.event = event;
-  }
-
-  execute() {
-    HelloModel.message = this.event.data;
-  }
-}
-```
-
-### `Context.js`
-
-```javascript
-import HelloCommand from '@/commands/HelloCommand';
-import { EventManager } from '@/events/EventManager';
-import Mapper from '@/Mapper';
-
-export const events = new EventManager();
-export const mapper = new Mapper(events);
-
-export function initContext() {
-  mapper.mapCommand(HelloCommand, 'Hello.InputChanged');
-}
-```
-
-### `components/Hello.vue`
-
-```vue
-<template>
-  <div class="hello">
-    <p>{{ message }}</p>
-    <input type="text" @input="inputUpdated" />
-  </div>
-</template>
-
-<script>
-import HelloModel from '@/models/HelloModel';
-import { events } from '@/Context';
-
-export default {
-  name: 'Hello',
-  data() {
-    return HelloModel;
-  },
-  methods: {
-    inputUpdated(e) {
-      events.notify('Hello.InputChanged', e.currentTarget.value);
-    },
-  },
-};
-</script>
-```
-
-### `App.vue`
-Update your `App.vue` to add a `beforeCreate` lifecycle hook and add in your component.
-
-```vue
-import { initContext } from '@/Context';
-import Hello from '@/components/Hello';
-
-export default {
-  name: 'App',
-  beforeCreate() {
-    initContext();
-  },
-  components: {
-    Hello,
-  },
-};
-```
+`Models`: Are object literals which act as singletons.
