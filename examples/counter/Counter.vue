@@ -58,7 +58,9 @@ export default {
       this.$context.events.notify('count.replies');
     },
     undo() {
-      this.$context.history.pop().undo();
+      if(this.$context.history.length) {
+        this.$context.history.pop().undo();
+      }
     }
   }
 }

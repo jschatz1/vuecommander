@@ -5,6 +5,10 @@ export class HistoryManager {
     this.history = [];
   }
 
+  get length() {
+    return this.history.length;
+  }
+
   clear() {
     this.history = [];
   }

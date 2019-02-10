@@ -73,6 +73,11 @@ function () {
     value: function pop() {
       return this.history.pop();
     }
+  }, {
+    key: "length",
+    get: function get() {
+      return this.history.length;
+    }
   }]);
 
   return HistoryManager;
