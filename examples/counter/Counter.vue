@@ -37,6 +37,7 @@
           </div>
         </nav>
       </div>
+      <button @click="undo">Undo</button>
     </article>
   </div>
 </template>
@@ -55,6 +56,9 @@ export default {
     },
     increaseReplies() {
       this.$context.events.notify('count.replies');
+    },
+    undo() {
+      this.$context.history.pop().undo();
     }
   }
 }
