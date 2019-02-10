@@ -1,0 +1,24 @@
+{
+  "name": "vuec",
+  "version": "0.0.1",
+  "description": "state management and application framework for vuejs",
+  "main": "index.js",
+  "repository": "https://github.com/jschatz1/vuec",
+  "scripts": {
+    "build": "rollup --config config/rollup.config.js",
+    "build:dev": "rollup --config config/rollup.config.common.js",
+    "test": "npm run build:dev && mocha test/unit"
+  },
+  "author": "Jacob Schatz",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "mocha": "^5.2.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-uglify": "^6.0.2"
+  }
+}
