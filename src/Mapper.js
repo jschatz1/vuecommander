@@ -10,7 +10,7 @@ export default class Mapper {
 
   update(e) {
     const command = new this.maps[e.eventType](e);
-    if(this.history) {
+    if(this.history && command.saveState) {
       command.saveState();
       this.history.push(command);
     }
@@ -18,9 +18,13 @@ export default class Mapper {
   }
 
   undo() {
-    if(!this.history) return;
-    const command = this.history.pop();
-    command.undo();
+    let command;
+    if(this.history) {
+      command = this.history.pop();
+    }
+    if(command.undo) {
+      this.history.pop().undo();
+    }
   }
 
   mapCommand(command, eventType) {

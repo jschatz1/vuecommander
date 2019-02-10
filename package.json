@@ -7,6 +7,7 @@
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
     "build:dev": "rollup --config config/rollup.config.common.js",
+    "build:examples": "npm run build:dev && node examples/server.js",
     "test": "npm run build:dev && mocha test/unit"
   },
   "author": "Jacob Schatz",
@@ -15,10 +16,22 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
     "mocha": "^5.2.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-uglify": "^6.0.2"
+    "rollup-plugin-uglify": "^6.0.2",
+    "rollup-plugin-vue": "^4.7.1",
+    "vue": "^2.6.4",
+    "vue-loader": "^15.6.2",
+    "vue-template-compiler": "^2.6.4",
+    "webpack": "^4.29.3",
+    "webpack-dev-middleware": "^3.5.2",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "rollup-plugin-commonjs": "^9.2.0"
   }
 }

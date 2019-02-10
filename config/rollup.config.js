@@ -1,6 +1,8 @@
 import commonConfig from './rollup.config.common';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
+import vue from 'rollup-plugin-vue';
+import commonjs from 'rollup-plugin-commonjs';
 import { uglify } from "rollup-plugin-uglify";
 
 const configs = [

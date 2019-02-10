@@ -187,7 +187,46 @@
     return Mapper;
   }();
 
+  var Context =
+  /*#__PURE__*/
+  function () {
+    function Context(vm, map) {
+      _classCallCheck(this, Context);
+
+      this.events = new EventManager();
+      this.history = new HistoryManager();
+      this.mapper = new Mapper(this.events, this.history);
+      this.mapCommands(map);
+      this.injectChildren(vm);
+    }
+
+    _createClass(Context, [{
+      key: "mapCommands",
+      value: function mapCommands(map) {
+        var _this = this;
+
+        Object.keys(map).forEach(function (key, index) {
+          _this.mapper.mapCommand(map[key], key);
+        });
+      }
+    }, {
+      key: "injectChildren",
+      value: function injectChildren(vm) {
+        var options = vm.$options;
+
+        if (options.context) {
+          vm.$context = this;
+        } else if (options.parent && options.parent.$context) {
+          vm.$context = options.parent.$context;
+        }
+      }
+    }]);
+
+    return Context;
+  }();
+
   var index = {
+    Context: Context,
     IEventListener: IEventListener,
     EventManager: EventManager,
     HistoryManager: HistoryManager,
