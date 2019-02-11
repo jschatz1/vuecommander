@@ -1,6 +1,6 @@
 {
   "name": "vueglue",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "state management and application framework for vuejs",
   "main": "dist/vueglue.common.js",
   "module": "dist/vueglue.esm.js",
