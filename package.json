@@ -1,8 +1,13 @@
 {
   "name": "vueglue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "state management and application framework for vuejs",
-  "main": "index.js",
+  "main": "dist/vueglue.common.js",
+  "module": "dist/vueglue.esm.js",
+  "unpkg": "dist/vueglue.js",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/jschatz1/vuec",
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
