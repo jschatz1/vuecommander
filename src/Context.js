@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { EventManager, HistoryManager } from './EventManager';
 import Mapper from './Mapper'; 
 
