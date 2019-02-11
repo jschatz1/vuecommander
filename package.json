@@ -12,7 +12,8 @@
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
     "build:dev": "rollup --config config/rollup.config.common.js",
-    "build:examples": "yarn webpack --config examples/webpack.config.prod.js && npm run build:dev && node examples/server.js",
+    "build:examples": "yarn webpack --config examples/webpack.config.prod.js",
+    "dev": "npm run build:dev && node examples/server.js",
     "test": "npm run build:dev && mocha test/unit"
   },
   "author": "Jacob Schatz",
