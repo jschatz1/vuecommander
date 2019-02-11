@@ -1,5 +1,7 @@
 # Vueglue
 
+![Vue Glue Logo](logo.png "VueGlue Logo")
+
 Vueglue is a Vuejs application framework utilizing the classic ([GoF](https://en.wikipedia.org/wiki/Design_Patterns)) [command](https://en.wikipedia.org/wiki/Command_pattern) and [observer](https://en.wikipedia.org/wiki/Observer_pattern) design patterns, as well as dependency injection (which comes free with JavaScript) for easy and opinionated management of large applications. It provides a clear separation of concerns. Vueglue lets you parameterize methods with different requests, delay or queue a request execution, and support undoable operations.
 
 ## Benefits
