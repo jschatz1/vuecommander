@@ -1,10 +1,10 @@
 {
-  "name": "vueglue",
+  "name": "vuecommander",
   "version": "0.0.10",
   "description": "state management and application framework for vuejs",
-  "main": "dist/vueglue.common.js",
-  "module": "dist/vueglue.esm.js",
-  "unpkg": "dist/vueglue.js",
+  "main": "dist/vuecommander.common.js",
+  "module": "dist/vuecommander.esm.js",
+  "unpkg": "dist/vuecommander.js",
   "files": [
     "dist"
   ],

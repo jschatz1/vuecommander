@@ -1,14 +1,14 @@
 import Vue from 'vue';
-import VueGlue from 'vueglue';
+import VueCommander from 'vuecommander';
 import {
   LikesCommand,
   RetweetsCommand,
   RepliesCommand
 } from './CountCommand';
 
-Vue.use(VueGlue);
+Vue.use(VueCommander);
 
-export default new VueGlue.Context({
+export default new VueCommander.Context({
   'count.like': LikesCommand,
   'count.retweets': RetweetsCommand,
   'count.replies': RepliesCommand,

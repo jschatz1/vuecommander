@@ -1,14 +1,14 @@
 'use strict'
 
-const vueglue = require('../../dist/vueglue.common.js');
+const vuecommander = require('../../dist/vuecommander.common.js');
 
 var assert = require('assert');
 describe('Mapper', function() {
   describe('mapCommand', function() {
     var result = 0;
     var resultFromEvent = 0;
-    var eventManager = new vueglue.EventManager();
-    var mapper = new vueglue.Mapper(eventManager, null);
+    var eventManager = new vuecommander.EventManager();
+    var mapper = new vuecommander.Mapper(eventManager, null);
     function Command(e) {
       this.event = e;
     }

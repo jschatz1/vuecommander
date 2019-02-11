@@ -9,9 +9,9 @@ const configs = [
   {
     input: 'src/index.js',
     output: {
-      file: 'dist/vueglue.js',
+      file: 'dist/vuecommander.js',
       format: 'umd',
-      name: 'VueGlue'
+      name: 'VueCommander'
     },
     plugins: [
       resolve(),
@@ -23,10 +23,10 @@ const configs = [
   {
     input: 'src/index.js',
     output: {
-      file: 'dist/vueglue.min.js',
+      file: 'dist/vuecommander.min.js',
       format: 'umd',
       compact: true,
-      name: 'VueGlue'
+      name: 'VueCommander'
     },
     plugins: [
       uglify(),
@@ -39,9 +39,9 @@ const configs = [
   {
     input: 'src/index.js',
     output: {
-      file: 'dist/vueglue.esm.js',
+      file: 'dist/vuecommander.esm.js',
       format: 'es',
-      name: 'VueGlue'
+      name: 'VueCommander'
     },
     plugins: [
       resolve(),

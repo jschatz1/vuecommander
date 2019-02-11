@@ -1,10 +1,10 @@
-# VueGlue
+# VueCommander
 
-![VueGlue Logo](logo.png "VueGlue Logo")
+![VueCommander Logo](logo.png "VueCommander Logo")
 
-See [VueGlue.com](http://vueglue.com) for documentation and examples.
+See [VueCommander.com](http://vuecommander.com) for documentation and examples.
 
-VueGlue is a Vuejs application framework utilizing the classic ([GoF](https://en.wikipedia.org/wiki/Design_Patterns)) [command](https://en.wikipedia.org/wiki/Command_pattern) and [observer](https://en.wikipedia.org/wiki/Observer_pattern) design patterns, as well as dependency injection (which comes free with JavaScript) for easy and opinionated management of large applications. It provides a clear separation of concerns. VueGlue lets you parameterize methods with different requests, delay or queue a request execution, and support undoable operations.
+VueCommander is a Vuejs application framework utilizing the classic ([GoF](https://en.wikipedia.org/wiki/Design_Patterns)) [command](https://en.wikipedia.org/wiki/Command_pattern) and [observer](https://en.wikipedia.org/wiki/Observer_pattern) design patterns, as well as dependency injection (which comes free with JavaScript) for easy and opinionated management of large applications. It provides a clear separation of concerns. VueCommander lets you parameterize methods with different requests, delay or queue a request execution, and support undoable operations.
 
 ## Benefits
 By using the command design pattern, each action a user takes is self contained in an instance. This has huge benefits in that it can be stored in it's current state and reversed later. Storage of commands is extremely light weight. By creating a class for each command you can separate your business logic into proper methods and have a self contained unit of operation. See Getting Started below.

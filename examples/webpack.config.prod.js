@@ -32,7 +32,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      vueglue: path.resolve(__dirname, '../dist/vueglue.esm.js')
+      vuecommander: path.resolve(__dirname, '../dist/vuecommander.esm.js')
     }
   },
 

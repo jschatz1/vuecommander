@@ -1,15 +1,15 @@
 'use strict'
 
-const vueglue = require('../../dist/vueglue.common.js');
+const vuecommander = require('../../dist/vuecommander.common.js');
 
 var assert = require('assert');
 describe('EventManager', function() {
   describe('implemented', function() {
-    var eventManager = new vueglue.EventManager();
+    var eventManager = new vuecommander.EventManager();
     var listener;
     var result = 0;
     function Listener() {
-      vueglue.IEventListener.implementedBy(this)
+      vuecommander.IEventListener.implementedBy(this)
     }
     Listener.prototype.update = function(e){
       result += e.data;

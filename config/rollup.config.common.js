@@ -4,9 +4,9 @@ import resolve from 'rollup-plugin-node-resolve';
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/vueglue.common.js',
+    file: 'dist/vuecommander.common.js',
     format: 'cjs',
-    name: 'VueGlue'
+    name: 'VueCommander'
   },
   plugins: [
     resolve(),
