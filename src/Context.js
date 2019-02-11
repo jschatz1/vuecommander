@@ -11,7 +11,6 @@ export default class Context {
 
   mapCommands(map) {
     Object.keys(map).forEach((key,index) => {
-      console.log(map[key], key)
       this.mapper.mapCommand(map[key], key);
     });
   }
