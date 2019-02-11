@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import { TodoDoneCommand, TodoAddCommand, TodoDeleteCommand } from './TodoCommands';
-import Vueglue from '../../dist/vueglue.common.js';
+import VueGlue from 'vueglue';
 
-Vue.use(Vueglue);
+Vue.use(VueGlue);
 
-export default new Vueglue.Context({
+export default new VueGlue.Context({
   'todo.done': TodoDoneCommand,
   'todo.submitted': TodoAddCommand,
   'todo.delete': TodoDeleteCommand,

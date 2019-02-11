@@ -10,17 +10,16 @@ module.exports = {
     const fullDir = path.join(__dirname, dir)
     const entry = path.join(fullDir, 'app.js')
     if (fs.statSync(fullDir).isDirectory() && fs.existsSync(entry)) {
-      entries[dir] = ['webpack-hot-middleware/client', entry]
+      entries[dir] = entry
     }
 
     return entries
   }, {}),
 
   output: {
-    path: path.join(__dirname, '__build__'),
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/__build__/'
   },
 
   module: {
@@ -51,7 +50,6 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ]
 
