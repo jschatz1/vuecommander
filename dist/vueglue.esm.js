@@ -210,8 +210,6 @@ function () {
       var _this = this;
 
       Object.keys(map).forEach(function (key, index) {
-        console.log(map[key], key);
-
         _this.mapper.mapCommand(map[key], key);
       });
     }
