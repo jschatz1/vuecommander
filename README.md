@@ -11,6 +11,24 @@ Undoing is historically implemented using either the command or memento design p
 
 See the examples directory for a list of examples.
 
+Clone the repo and run
+
+```
+yarn build:examples
+```
+
+Compile the source
+
+```
+yarn build
+```
+
+Run the tests
+
+```
+yarn test
+```
+
 `Context`: A Context describes commands you would like to map to what events. 
 
 `Commands`: A class with an execute method that cannot receive any parameters. It is a self contained unit of execution. You can use the command class to do all your business logic. You can inject any models you want to change into this command. Those models should be object literals which will act as singletons. 

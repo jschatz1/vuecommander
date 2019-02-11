@@ -1,11 +1,11 @@
 'use strict'
 
-const vuec = require('../../dist/vuec.common.js');
+const vueglue = require('../../dist/vueglue.common.js');
 
 var assert = require('assert');
 describe('Interface', function() {
   describe('implemented', function() {
-    var IHuman = new vuec.Interface("run");
+    var IHuman = new vueglue.Interface("run");
     var human;
     function Human() {
       IHuman.implementedBy(this);

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { TodoDoneCommand, TodoAddCommand, TodoDeleteCommand } from './TodoCommands';
-import Vuec from '../../dist/vuec.common.js';
+import Vuec from '../../dist/vueglue.common.js';
 
 Vue.use(Vuec);
 

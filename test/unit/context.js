@@ -1,6 +1,6 @@
 'use strict'
 
-const vuec = require('../../dist/vuec.common.js');
+const vueglue = require('../../dist/vueglue.common.js');
 
 var assert = require('assert');
 describe('Context', function() {
@@ -25,7 +25,7 @@ describe('Context', function() {
       resultFromEvent += this.event.data.num;
     }
 
-    var context = new vuec.Context({
+    var context = new vueglue.Context({
       'context.works': Command,
     });
 

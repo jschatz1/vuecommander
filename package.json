@@ -1,5 +1,5 @@
 {
-  "name": "vuec",
+  "name": "vueglue",
   "version": "0.0.1",
   "description": "state management and application framework for vuejs",
   "main": "index.js",

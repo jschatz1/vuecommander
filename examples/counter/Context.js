@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Vuec from '../../dist/vuec.common.js';
+import Vuec from '../../dist/vueglue.common.js';
 import {
   LikesCommand,
   RetweetsCommand,
