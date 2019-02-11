@@ -1,6 +1,6 @@
 {
   "name": "vueglue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "state management and application framework for vuejs",
   "main": "index.js",
   "repository": "https://github.com/jschatz1/vuec",
