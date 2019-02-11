@@ -1,6 +1,6 @@
 {
   "name": "vuecommander",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "state management and application framework for vuejs",
   "main": "dist/vuecommander.common.js",
   "module": "dist/vuecommander.esm.js",
